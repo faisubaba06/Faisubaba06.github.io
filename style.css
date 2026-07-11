@@ -1,7 +1,3 @@
-/* =========================
-   GLOBAL
-========================= */
-
 *{
     margin:0;
     padding:0;
@@ -15,200 +11,163 @@ html{
 body{
     font-family:'Poppins',sans-serif;
     background:#0b0b0b;
-    color:#fff;
-    line-height:1.7;
+    color:#ffffff;
     overflow-x:hidden;
+    position:relative;
 }
 
 .overlay{
     position:fixed;
     inset:0;
     background:
-    radial-gradient(circle at top,#c9a22722 0%,transparent 60%),
-    linear-gradient(180deg,#0d0d0d,#000);
+    radial-gradient(circle at top,#b68d4050,transparent 60%),
+    linear-gradient(#111,#000);
     z-index:-1;
 }
-
-.container{
-    width:90%;
-    max-width:1100px;
-    margin:auto;
-}
-
-/* =========================
-   HERO
-========================= */
 
 .hero{
     min-height:100vh;
     display:flex;
-    align-items:center;
+    flex-direction:column;
     justify-content:center;
-    padding:80px 0;
-}
-
-.hero-content{
-    display:flex;
-    flex-wrap:wrap;
     align-items:center;
-    justify-content:center;
-    gap:60px;
+    text-align:center;
+    padding:60px 20px;
 }
 
 .profile{
-    width:320px;
-    height:320px;
+    width:240px;
+    height:240px;
     object-fit:cover;
     border-radius:50%;
-    border:5px solid #c9a227;
-    box-shadow:0 0 40px rgba(201,162,39,.35);
+    border:5px solid #c8a45d;
+    box-shadow:0 0 40px rgba(200,164,93,.4);
+    margin-bottom:35px;
 }
 
-.hero-text{
-    max-width:520px;
-}
-
-.hero-text h1{
+h1{
     font-family:'Cormorant Garamond',serif;
-    font-size:3.4rem;
-    margin-bottom:10px;
+    font-size:4rem;
+    color:#fff;
+    font-weight:700;
 }
 
-.hero-text h2{
-    color:#c9a227;
-    font-weight:500;
-    margin-bottom:20px;
+h2{
+    margin-top:12px;
+    color:#d8b46b;
+    font-weight:400;
+    font-size:1.35rem;
 }
 
-.hero-text p{
-    color:#d7d7d7;
-    font-size:1.05rem;
+.gold-line{
+    width:120px;
+    height:3px;
+    background:#c8a45d;
+    margin:30px auto;
 }
 
-/* =========================
-   WELCOME
-========================= */
-
-.welcome{
-    padding:80px 0;
-}
-
-.section-title{
-    font-family:'Cormorant Garamond',serif;
-    color:#c9a227;
-    text-align:center;
-    font-size:2.3rem;
-    margin-bottom:40px;
-}
-
-.welcome-box{
-    background:#111;
-    border:1px solid rgba(201,162,39,.25);
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 15px 40px rgba(0,0,0,.35);
-}
-
-.welcome-box p{
-    margin-bottom:18px;
+.tagline{
+    font-size:1.1rem;
     color:#ddd;
+    max-width:700px;
 }
 
-/* =========================
-   CONNECT
-========================= */
-
+.welcome,
 .connect{
-    padding:80px 0;
+    max-width:1000px;
+    margin:auto;
+    padding:90px 25px;
+}
+
+.welcome h3,
+.connect h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2.4rem;
+    color:#d8b46b;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.welcome p{
+    color:#ddd;
+    line-height:1.9;
+    text-align:center;
+    font-size:1.05rem;
+    margin-bottom:20px;
 }
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:25px;
+    margin-top:40px;
 }
 
 .card{
-    background:#141414;
-    border:1px solid rgba(201,162,39,.18);
-    border-radius:20px;
-    padding:35px 20px;
-    text-align:center;
     text-decoration:none;
     color:#fff;
+    background:#181818;
+    border:1px solid rgba(200,164,93,.3);
+    border-radius:18px;
+    padding:28px;
+    display:flex;
+    align-items:center;
+    gap:20px;
     transition:.35s;
-}
-
-.card i{
-    font-size:2.4rem;
-    color:#c9a227;
-    margin-bottom:18px;
-}
-
-.card h3{
-    margin-bottom:8px;
-}
-
-.card p{
-    color:#bbb;
-    font-size:.95rem;
 }
 
 .card:hover{
     transform:translateY(-8px);
-    border-color:#c9a227;
-    box-shadow:0 15px 35px rgba(201,162,39,.25);
+    border-color:#c8a45d;
+    box-shadow:0 15px 40px rgba(200,164,93,.2);
 }
 
-/* =========================
-   FOOTER
-========================= */
+.card i{
+    font-size:34px;
+    color:#d8b46b;
+    width:45px;
+    text-align:center;
+}
+
+.card h4{
+    font-size:1.2rem;
+    margin-bottom:6px;
+}
+
+.card span{
+    color:#bbbbbb;
+    font-size:.95rem;
+}
 
 footer{
     text-align:center;
-    padding:50px 0;
-    color:#999;
+    padding:50px 20px;
+    color:#888;
+    border-top:1px solid rgba(255,255,255,.08);
 }
-
-/* =========================
-   ANIMATIONS
-========================= */
-
-.hero,
-.welcome,
-.connect,
-footer{
-    opacity:0;
-    transform:translateY(40px);
-    transition:1s ease;
-}
-
-.show{
-    opacity:1 !important;
-    transform:translateY(0) !important;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
 
 @media(max-width:768px){
 
-.hero-text h1{
-    font-size:2.5rem;
-}
-
-.hero-text{
-    text-align:center;
-}
-
 .profile{
-    width:250px;
-    height:250px;
+    width:180px;
+    height:180px;
 }
 
-.hero{
-    padding-top:60px;
+h1{
+    font-size:2.6rem;
+}
+
+h2{
+    font-size:1.05rem;
+}
+
+.welcome h3,
+.connect h3{
+    font-size:2rem;
+}
+
+.cards{
+    grid-template-columns:1fr;
 }
 
 }
